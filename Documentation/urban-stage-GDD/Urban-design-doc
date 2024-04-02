@@ -1,0 +1,50 @@
+Urban Stage Planning Doc
+Need: 
+What agents to have
+Tentative props for the agents
+
+Agents:
+  Cars
+      Trucks
+      Vans
+      Normal Cars
+  Pedestrians
+      Walking
+      Running
+      Littering
+      Loitering
+      Swimming
+      Shop owners
+  Small Animals on the beach:
+      Snails
+      Crabs
+      Slugs
+      Washed up jellyfish
+      Seaweed
+      Sand dollars
+      Urchins
+      Octopus
+      Small School fish
+      Horseshoe Crab
+Characteristics to keep track of:
+  Humans
+    Sunscreen application (type of sunscreen)
+    Holding disposable goods (water bottle, ice cream cup, plastic straw)
+    Likelihood of littering
+    Total population of humans at the beach
+  Cars
+    C02 emissions
+    Oil Spills
+    Noise pollution
+    Increasing/decreasing the human population at the beach (bringing in new tourists/tourists leaving to go home) (not car crash fatalities)(but maybe)
+		
+Potential Stages:
+  Beach Side Boardwalk:
+      A beach with a bustling business center. Filled with lots of local businesses and both vehicle and foot traffic. Extremely popular with both tourists and locals, the beach is almost always bustling with activity.
+  Just a Beach:
+      A private or public beach. There’s none to very little actual business on the beach, maybe a small italian ice stand but that’s about it. However, there’s a lot of foot traffic from many people coming to relax.
+  Harbor and Port (+ Dock ig):
+      A place for large ships to rest and reload. Very few civilians are around, instead the place is filled with sailors and other workers. They are constantly loading and unloading goods, preparing for ships to enter and leave.
+  Untamed Wilderness:
+      Very little to no human interaction. It’s a place nearly untouched by civilization. Plants and animals thrive on the beach. Can have humans move in over the course of the game, seeing how beachside development impacts the surrounding ecosystem.
+
