@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://bg7r7do3ky0w5"]
+
+[ext_resource type="Texture2D" uid="uid://py2gmmcytjek" path="res://assets/sprites/crab_spritesheet.png" id="1_3rxrq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1vri"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(300, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuvko"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(400, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idfyf"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(500, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8odgs"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(0, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pej8"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(100, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxcuh"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(200, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hdip"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(300, 0, 100, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwoq5"]
+atlas = ExtResource("1_3rxrq")
+region = Rect2(400, 0, 100, 103)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_712kw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1vri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuvko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idfyf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8odgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pej8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxcuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hdip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwoq5")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pt3ss"]
+radius = 42.0
+height = 84.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_62bt3"]
+radius = 242.392
+
+[node name="Crab" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_712kw")
+animation = &"Idle"
+frame_progress = 0.314015
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pt3ss")
+
+[node name="Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource("CircleShape2D_62bt3")

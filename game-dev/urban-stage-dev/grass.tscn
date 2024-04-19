@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvue2ff1hetut"]
+
+[ext_resource type="Texture2D" uid="uid://bu273x8hmrfj1" path="res://assets/sprites/beach_grass.png" id="1_aasfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mdlv"]
+atlas = ExtResource("1_aasfc")
+region = Rect2(0, 0, 490, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji3p6"]
+atlas = ExtResource("1_aasfc")
+region = Rect2(490, 0, 490, 768)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43luc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mdlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji3p6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iuyxm"]
+radius = 99.0
+height = 296.0
+
+[node name="Grass" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 11)
+scale = Vector2(0.407143, 0.384766)
+sprite_frames = SubResource("SpriteFrames_43luc")
+animation = &"Idle"
+frame_progress = 0.126038
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 27)
+shape = SubResource("CapsuleShape2D_iuyxm")
