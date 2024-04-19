@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnaalseaxkhon"]
+
+[ext_resource type="Script" path="res://pollution.gd" id="1_vqaes"]
+
+[node name="Pollution" type="Node2D"]
+script = ExtResource("1_vqaes")

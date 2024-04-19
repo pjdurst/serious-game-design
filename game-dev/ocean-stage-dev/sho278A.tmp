@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c25uhc82p6x6r"]
+
+[ext_resource type="PackedScene" uid="uid://bnaalseaxkhon" path="res://pollution.tscn" id="1_ry8io"]
+[ext_resource type="PackedScene" uid="uid://uw07563uwrxg" path="res://garbage.tscn" id="2_3wpdx"]
+[ext_resource type="Script" path="res://Container.gd" id="3_161b6"]
+
+[sub_resource type="TileSet" id="TileSet_ujrqh"]
+
+[node name="Shore" type="Node2D"]
+
+[node name="Pollution" parent="." instance=ExtResource("1_ry8io")]
+
+[node name="Garbage" parent="." instance=ExtResource("2_3wpdx")]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ujrqh")
+format = 2
+
+[node name="Container" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_161b6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+text = "hkujhjkhk"
+tab_size = 3
+
+[connection signal="mouse_entered" from="Container" to="Container" method="_on_mouse_entered"]

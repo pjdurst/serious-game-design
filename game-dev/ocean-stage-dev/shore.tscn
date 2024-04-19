@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://c25uhc82p6x6r"]
+
+[ext_resource type="PackedScene" uid="uid://bnaalseaxkhon" path="res://pollution.tscn" id="1_ry8io"]
+[ext_resource type="PackedScene" uid="uid://uw07563uwrxg" path="res://garbage.tscn" id="2_3wpdx"]
+[ext_resource type="Script" path="res://Container.gd" id="3_161b6"]
+
+[sub_resource type="TileSet" id="TileSet_ujrqh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3f4g5"]
+
+[sub_resource type="Theme" id="Theme_sv5hh"]
+
+[node name="Shore" type="Node2D"]
+position = Vector2(27, 0)
+
+[node name="Pollution" parent="." instance=ExtResource("1_ry8io")]
+
+[node name="Garbage" parent="." instance=ExtResource("2_3wpdx")]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ujrqh")
+format = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="Container" type="Container" parent="ColorRect"]
+material = SubResource("CanvasItemMaterial_3f4g5")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_sv5hh")
+script = ExtResource("3_161b6")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -27.0
+offset_right = 102.0
+offset_bottom = 176.0
+scale = Vector2(0.21, 0.21)
+text = "hkujhjkhk"
+fit_content = true
+tab_size = 3
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="ColorRect/Container" to="ColorRect/Container" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ColorRect/Container" to="ColorRect/Container" method="_on_mouse_exited"]

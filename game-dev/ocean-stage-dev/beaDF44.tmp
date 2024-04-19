@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bresq3urfl5x"]
+
+[ext_resource type="PackedScene" uid="uid://c25uhc82p6x6r" path="res://shore.tscn" id="1_y4eif"]
+
+[node name="Beach" type="Node2D"]
+
+[node name="Shore" parent="." instance=ExtResource("1_y4eif")]
+position = Vector2(724, 174)
+scale = Vector2(20, 20)
