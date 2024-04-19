@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0l4a2qg8koxl"]
+
+[ext_resource type="Script" path="res://FishEntity.gd" id="1_y2ysv"]
+
+[node name="FishEntity" type="Node3D"]
+script = ExtResource("1_y2ysv")
