@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnnb1b4gb5oaj"]
+[gd_scene load_steps=3 format=3 uid="uid://cl3cy3pa6800a"]
 
 [ext_resource type="Script" path="res://OceanNode.gd" id="1_om6ii"]
-[ext_resource type="PackedScene" uid="uid://d0l4a2qg8koxl" path="res://fish_entity.tscn" id="2_j23cx"]
+[ext_resource type="PackedScene" uid="uid://dkvvl5ttdien4" path="res://fish_entity.tscn" id="2_j23cx"]
 
 [node name="Node3D" type="Node3D"]
 

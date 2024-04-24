@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b50cp5u383hxc"]
+
+[ext_resource type="PackedScene" uid="uid://cl3cy3pa6800a" path="res://node_3d.tscn" id="1_dy7b6"]
+[ext_resource type="PackedScene" uid="uid://bresq3urfl5x" path="res://beach.tscn" id="2_y3akt"]
+[ext_resource type="PackedScene" uid="uid://dkvvl5ttdien4" path="res://fish_entity.tscn" id="3_28iny"]
+
+[node name="Ocean" type="Node2D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_dy7b6")]
+
+[node name="Beach" parent="." instance=ExtResource("2_y3akt")]
+
+[node name="FishEntity" parent="." instance=ExtResource("3_28iny")]

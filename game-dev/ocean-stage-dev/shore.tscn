@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c25uhc82p6x6r"]
+[gd_scene load_steps=8 format=3 uid="uid://c25uhc82p6x6r"]
 
+[ext_resource type="Script" path="res://shore.gd" id="1_jbqbt"]
 [ext_resource type="PackedScene" uid="uid://bnaalseaxkhon" path="res://pollution.tscn" id="1_ry8io"]
 [ext_resource type="PackedScene" uid="uid://uw07563uwrxg" path="res://garbage.tscn" id="2_3wpdx"]
 [ext_resource type="Script" path="res://Container.gd" id="3_161b6"]
@@ -12,6 +13,7 @@
 
 [node name="Shore" type="Node2D"]
 position = Vector2(27, 0)
+script = ExtResource("1_jbqbt")
 
 [node name="Pollution" parent="." instance=ExtResource("1_ry8io")]
 
